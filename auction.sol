@@ -105,6 +105,15 @@ contract Auction {
         return result;
     }
 
+    /// @notice Returns the address of the auction winner and the amount of their winning bid.
+    /// @dev Can be called at any time, but makes sense after the auction has ended.
+    /// @return winner Address of the highest bidder.
+    /// @return amount Amount bid by the winner.
+
+    function getWinner() external view returns (address winner, uint256 amount) {
+        return (highestBidder, highestBid);
+    }
+
     // === Auction core ===
 
     function newBid() external payable onlyWhileActive {
