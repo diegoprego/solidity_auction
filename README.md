@@ -44,6 +44,7 @@ Allows the owner to withdraw accrued fees (2%).
 ## Query Functions
 
 - `getBidders()` – Returns the last bid for each bidder.
+- `getWinner()` – Returns the address of the winning bidder and the amount of their highest bid.
 - `getBalance()` – Returns the contract balance.
 - `timeUntilInactive()` – Returns the time remaining until the auction ends.
 
